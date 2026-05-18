@@ -4,6 +4,8 @@ Sistema desktop para gerenciamento de bibliotecas escolares, desenvolvido com Py
 
 O projeto foi criado com foco em simplicidade, organização e facilidade de uso, permitindo o controle completo de livros, alunos e empréstimos através de uma interface moderna e intuitiva.
 
+O sistema está sendo desenvolvido para utilização em algumas escolas municipais de Açailândia - MA, com o objetivo de facilitar o gerenciamento do acervo bibliotecário, melhorar o controle de empréstimos e auxiliar na organização escolar.
+
 ---
 
 # Funcionalidades
