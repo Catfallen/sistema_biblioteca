@@ -17,7 +17,7 @@ class MainWindow(ctk.CTk):
 
         self.title("Sistema Biblioteca")
 
-        self.geometry("1200x700")
+        self.geometry("1366x720")
 
         self.minsize(1000, 600)
 

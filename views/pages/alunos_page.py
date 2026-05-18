@@ -289,7 +289,7 @@ class AlunosPage(ctk.CTkFrame):
             padx=20,
             pady=10
         )
-
+        """
         self.limpar_btn = ctk.CTkButton(
             form_frame,
             text="Limpar",
@@ -304,7 +304,7 @@ class AlunosPage(ctk.CTkFrame):
             padx=20,
             pady=(10, 20)
         )
-
+        """
     # =========================================================
     # TABELA
     # =========================================================
