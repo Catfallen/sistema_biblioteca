@@ -78,7 +78,7 @@ class EmprestimosPage(ctk.CTkFrame):
 
     def criar_formulario(self):
 
-        form_frame = ctk.CTkFrame(
+        form_frame = ctk.CTkScrollableFrame(
             self,
             width=350
         )
@@ -512,9 +512,15 @@ class EmprestimosPage(ctk.CTkFrame):
 
         self.session.commit()
 
+        print("commit realizado")
+
         self.listar_emprestimos()
 
+        print("lista atualizada")
+
         self.limpar_campos()
+
+        print("campos limpos")
 
         messagebox.showinfo(
             "Sucesso",
@@ -701,19 +707,16 @@ class EmprestimosPage(ctk.CTkFrame):
 
         self.emprestimo_selecionado_id = None
 
-        self.livro_combobox.set("")
-
-        self.aluno_combobox.set("")
+        self.livro_entry.delete(0, "end")
+        self.aluno_entry.delete(0, "end")
 
         self.data_emprestimo_entry.delete(0, "end")
-
         self.data_emprestimo_entry.insert(
             0,
             date.today().strftime("%d/%m/%Y")
         )
 
         self.data_devolucao_prevista_entry.delete(0, "end")
-
         self.data_devolucao_prevista_entry.insert(
             0,
             (

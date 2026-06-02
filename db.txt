@@ -1,0 +1,38 @@
+CREATE TABLE alunos (
+	id INTEGER NOT NULL, 
+	nome VARCHAR(255) NOT NULL, 
+	turma VARCHAR(100) NOT NULL, 
+	matricula VARCHAR(100), 
+	telefone VARCHAR(30), 
+	ativo BOOLEAN, 
+	PRIMARY KEY (id), 
+	UNIQUE (matricula)
+);
+
+
+CREATE TABLE livros (
+	id INTEGER NOT NULL, 
+	obra VARCHAR(255) NOT NULL, 
+	autor VARCHAR(255) NOT NULL, 
+	ano INTEGER, 
+	categoria VARCHAR(100), 
+	editora VARCHAR(150), 
+	quantidade INTEGER, 
+	observacao VARCHAR(500), 
+	status VARCHAR(50), 
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE emprestimos (
+	id INTEGER NOT NULL, 
+	id_livro INTEGER NOT NULL, 
+	id_aluno INTEGER NOT NULL, 
+	data_emprestimo DATE NOT NULL, 
+	data_devolucao_prevista DATE, 
+	data_devolucao DATE, 
+	status VARCHAR(50), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(id_livro) REFERENCES livros (id), 
+	FOREIGN KEY(id_aluno) REFERENCES alunos (id)
+);

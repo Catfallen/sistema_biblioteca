@@ -405,7 +405,7 @@ class AlunosPage(ctk.CTkFrame):
 
         nome = self.nome_entry.get()
         turma = self.turma_entry.get()
-        matricula = self.matricula_entry.get()
+        matricula = self.matricula_entry.get().strip()
         telefone = self.telefone_entry.get()
         ativo = self.ativo_switch.get()
 
@@ -421,7 +421,7 @@ class AlunosPage(ctk.CTkFrame):
         aluno = Aluno(
             nome=nome,
             turma=turma,
-            matricula=matricula,
+            matricula=matricula or None,
             telefone=telefone,
             ativo=bool(ativo)
         )
@@ -455,7 +455,7 @@ class AlunosPage(ctk.CTkFrame):
                     aluno.id,
                     aluno.nome,
                     aluno.turma,
-                    aluno.matricula,
+                    aluno.matricula if aluno.matricula != None else "",
                     aluno.telefone,
                     "Sim" if aluno.ativo else "Não"
                 )

@@ -71,10 +71,10 @@ class LivrosPage(ctk.CTkFrame):
 
     def criar_formulario(self):
 
-        form_frame = ctk.CTkFrame(
-            self,
-            width=350
-        )
+        form_frame = ctk.CTkScrollableFrame(
+    self,
+    width=350
+)
 
         form_frame.grid(
             row=1,
